@@ -1,47 +1,3 @@
-// let accounts=[]
-// while (1) {
-//     console.log("1 .Create account")
-//     console.log("2. Show accounts")
-//     console.log("3. Deposite")
-//     console.log("4. Withdraw")
-//     console.log("5. Break")
-
-//     const prompt = require("prompt-sync")();
-//     var choice = parseInt(prompt("Enter the choice : "))    ;
-
-
-//     switch (choice) {
-//         case 1:
-//             const name = prompt("Enter name:");
-//             const phone=parseInt(prompt("Enter Phone: "))
-//             const initialBalance = parseFloat(prompt("Enter amount:"));
-//             accounts.push(name);
-//             accounts.push(phone);
-//             accounts.push(initialBalance)
-//             console.log(accounts)
-//             break;
-//         case 2:
-//             for (let i = phone) {
-//             console.log(accounts);
-//         }
-
-//             console.log(accounts)
-//             break;
-//         case 3:
-//             const phone = parseInt(prompt("Enter Phone: "))
-//             const amount = parseFloat(prompt("Enter amount to deposit:"));
-//             accounts.splice(
-
-//              break;
-//         case 4:c=a/b
-//             console.log(c)
-//             break;
-//         case 5:
-//             break;
-//     }
-// }
-
-
 let bankAccounts = [];
 
 while (1) {
@@ -66,18 +22,46 @@ while (1) {
             break;
 
         case 2:
-            let searchPhoneShow = prompt("Enter phone number to show details:");
+            // let searchPhoneShow = prompt("Enter phone number to show details:");
             // let foundAccountShow = null;
-            for (let i = bankAccounts; i < bankAccounts.length; i++) {
-            if (bankAccounts[i].phone === searchPhoneShow) {
-                console.log(`Name:${i[0]}`)
-                console.log(`Phone:${i[1]}`)
-                console.log(`Amount :${i[2]}`)
-            } else {
-                console.log("Account not found.");
+            // for (let i = 0; i < bankAccounts.length; i++) {
+            //     if (bankAccounts[i].phone === searchPhoneShow) {
+            //         foundAccountShow = bankAccounts[i];
+            //         break;
+            //     }
+            //     if (foundAccountShow) {
+            //         console.log(`Name:${foundAccountShow.name}`);
+            //         console.log(`Phone:${foundAccountShow.phone}`);
+            //         console.log(`Balance:${foundAccountShow.balance}`);
+            //     } else {
+            //        console.log("Account not found.");
+            //     }
+            //     break;
+
+
+            // }
+
+
+
+
+            let searchPhoneShow = prompt("Enter phone number to show details:");
+            
+            for (let i = 0; i < bankAccounts.length; i++) {
+                if (bankAccounts[i].phone === searchPhoneShow) {
+                    console.log(bankAccounts[i].name);
+                    console.log(bankAccounts[i].phone);
+                    console.log(bankAccounts[i].amount);
+
+                } else {
+                   console.log("Account not found.");
+                }
+                break;
+
+
             }
-            break;
-        }
+
+
+
         case 3:
             let searchPhoneDeposit = prompt("Enter phone number to deposit:");
             let foundAccountDeposit = null;
@@ -102,7 +86,7 @@ while (1) {
             }
             break;
 
-        case 4: 
+        case 4:
             let searchPhoneWithdraw = prompt("Enter phone number to withdraw:");
             let foundAccountWithdraw = null;
             for (let i = 0; i < bankAccounts.length; i++) {
