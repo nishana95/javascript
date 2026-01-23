@@ -22,36 +22,17 @@ while (1) {
             break;
 
         case 2:
-            // let searchPhoneShow = prompt("Enter phone number to show details:");
-            // let foundAccountShow = null;
-            // for (let i = 0; i < bankAccounts.length; i++) {
-            //     if (bankAccounts[i].phone === searchPhoneShow) {
-            //         foundAccountShow = bankAccounts[i];
-            //         break;
-            //     }
-            //     if (foundAccountShow) {
-            //         console.log(`Name:${foundAccountShow.name}`);
-            //         console.log(`Phone:${foundAccountShow.phone}`);
-            //         console.log(`Balance:${foundAccountShow.balance}`);
-            //     } else {
-            //        console.log("Account not found.");
-            //     }
-            //     break;
-
-
-            // }
-
-
-
-
             let searchPhoneShow = prompt("Enter phone number to show details:");
-            
+            let foundAccountShow = null;
             for (let i = 0; i < bankAccounts.length; i++) {
                 if (bankAccounts[i].phone === searchPhoneShow) {
-                    console.log(bankAccounts[i].name);
-                    console.log(bankAccounts[i].phone);
-                    console.log(bankAccounts[i].amount);
-
+                    foundAccountShow = bankAccounts[i];
+                    break;
+                }
+                if (foundAccountShow) {
+                    console.log(`Name:${foundAccountShow.name}`);
+                    console.log(`Phone:${foundAccountShow.phone}`);
+                    console.log(`Balance:${foundAccountShow.balance}`);
                 } else {
                    console.log("Account not found.");
                 }
@@ -59,9 +40,6 @@ while (1) {
 
 
             }
-
-
-
         case 3:
             let searchPhoneDeposit = prompt("Enter phone number to deposit:");
             let foundAccountDeposit = null;

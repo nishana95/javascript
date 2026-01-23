@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <button type="submit" id="addButton">button</button>
+
+    <form>
+        <input type="text" placeholder="Type something...">
+    </form>
+
+    <p id="displayText"></p>
+    
+
+    <script>
+        const button = document.getElementById("addButton");
+        button.addEventListener("click", () => {
+            const newItem = document.createElement("li");
+            newItem.innerText = "New Item";
+            document.querySelector("ul").appendChild(newItem);
+        });
+
+        const input = document.querySelector("input");
+        const display = document.getElementById("displayText");
+
+        input.addEventListener("input", event => {
+            display.innerText = event.target.value;
+        });
+    
+    </script>
+</body>
+
+</html>

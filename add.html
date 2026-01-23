@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Two Numbers</title>
+</head>
+<body>
+
+<h2>JavaScript Alert & Addition</h2>
+
+<button onclick="addNumbers()">Add Two Numbers</button>
+
+<script>
+function addNumbers() {
+    // Take input from user using prompt
+    let num1 = prompt("Enter first number:");
+    let num2 = prompt("Enter second number:");
+
+    // Convert text to number
+    num1 = Number(num1);
+    num2 = Number(num2);
+
+    // Add numbers
+    let sum = num1 + num2;
+
+    // Show result in alert
+    alert("The sum is: " + sum);
+}
+</script>
+
+</body>
+</html>

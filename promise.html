@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a Promise</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const myPromise = new Promise((resolve, reject) => {
+            const success = true;
+            if (success) {
+                resolve("Task completed successfully!");
+            } else {
+                reject("Task failed.");
+            }
+        });
+        myPromise
+            .then(message => console.log(message))
+            .catch(error => console.error(error));
+
+    </script>
+
+</body>
+
+</html>
